@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <select id="input-1">
+      <option value="🙂">Smile</option>
+      <option value="😃">Grin</option>
+      <option value="😉">Wink</option>
+      <option value="😊">Blush</option>
+      <option value="😎">Sunglasses</option>
+      <option value="🤖">Robot</option>
+      <option value="😈">Devil</option>
+    </select>
+    <select id="input-2">
+      <option value="🙂">Smile</option>
+      <option value="😃">Grin</option>
+      <option value="😉">Wink</option>
+      <option value="😊">Blush</option>
+      <option value="😎">Sunglasses</option>
+      <option value="🤖">Robot</option>
+      <option value="😈">Devil</option>
+    </select>
+    <button onclick="flipCoin()">Flip Coin</button>
+    <div id="result"></div>
+    <script>
+      function flipCoin() {
+        var face = document.getElementById("input-1").value;
+        var emoji = document.getElementById("input-2").value;
+        var result = Math.random() < 0.5 ? face : emoji;
+        document.getElementById("result").textContent = "Result: " + result;
+      }
+    </script>
+  </body>
+</html>
